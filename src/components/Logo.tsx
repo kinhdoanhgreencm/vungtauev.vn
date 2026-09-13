@@ -13,16 +13,16 @@ export default function Logo({
     <Link href="/" className="inline-flex shrink-0 items-center">
       <span
         className={`flex shrink-0 items-center justify-center overflow-hidden rounded-xl ${
-          dark ? "bg-white p-1.5 shadow-md" : ""
+          dark ? "bg-white px-2 shadow-md" : ""
         }`}
-        style={{ height: size, width: size }}
+        style={{ height: size }}
       >
         <Image
           src="/logo-website.png"
           alt={siteConfig.name}
-          width={size}
-          height={size}
-          className="h-full w-full object-contain"
+          width={1200}
+          height={630}
+          className="h-full w-auto object-contain"
           priority
         />
       </span>

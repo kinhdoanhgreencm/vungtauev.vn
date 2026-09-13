@@ -72,7 +72,7 @@ export default function Header() {
         </button>
 
         <div className="justify-self-center lg:justify-self-auto">
-          <Logo size={72} />
+          <Logo size={104} />
         </div>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -104,7 +104,7 @@ export default function Header() {
       {open && (
         <div className="animate-fade-in fixed inset-0 z-[60] flex flex-col bg-white lg:hidden">
           <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-            <Logo size={56} />
+            <Logo size={72} />
             <button
               type="button"
               onClick={() => setOpen(false)}
