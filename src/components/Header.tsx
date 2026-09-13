@@ -53,13 +53,13 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-3 sm:px-6 lg:flex lg:justify-between lg:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-3 sm:px-6 lg:px-8 xl:flex xl:justify-between">
         <button
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Mở menu"
           aria-expanded={open}
-          className="inline-flex h-10 w-10 items-center justify-center justify-self-start rounded-lg border border-slate-200 text-dark lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center justify-self-start rounded-lg border border-slate-200 text-dark xl:hidden"
         >
           <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
             <path
@@ -71,16 +71,16 @@ export default function Header() {
           </svg>
         </button>
 
-        <div className="justify-self-center lg:justify-self-auto">
+        <div className="justify-self-center xl:justify-self-auto">
           <Logo size={64} />
         </div>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-1 xl:flex">
           {mainNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`rounded-full px-4 py-2 text-[15px] font-semibold transition-colors ${
+              className={`whitespace-nowrap rounded-full px-4 py-2 text-[15px] font-semibold transition-colors ${
                 isActive(item.href)
                   ? "bg-primary/10 text-primary"
                   : "text-dark hover:bg-slate-100 hover:text-primary"
@@ -91,10 +91,10 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden justify-self-end lg:block">
+        <div className="hidden justify-self-end xl:block">
           <Link
             href="/lien-he"
-            className="gradient-primary shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-105"
+            className="gradient-primary shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-105"
           >
             Đăng Ký Gia Nhập HTX
           </Link>
@@ -102,7 +102,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="animate-fade-in fixed inset-0 z-[60] flex flex-col bg-white lg:hidden">
+        <div className="animate-fade-in fixed inset-0 z-[60] flex flex-col bg-white xl:hidden">
           <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
             <Logo size={48} />
             <button
