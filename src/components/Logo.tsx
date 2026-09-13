@@ -18,7 +18,7 @@ export default function Logo({
         style={{ height: size, width: size }}
       >
         <Image
-          src="/logo.png"
+          src="/logo-website.png"
           alt={siteConfig.name}
           width={size}
           height={size}

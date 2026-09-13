@@ -49,14 +49,14 @@ export const metadata: Metadata = {
     title: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
     description:
       "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Xanh SM Partner tại Bà Rịa - Vũng Tàu.",
-    images: [{ url: "/logo.png", width: 1254, height: 1254, alt: siteConfig.name }],
+    images: [{ url: "/logo-website.png", width: 1200, height: 630, alt: siteConfig.name }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
     description:
       "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Xanh SM Partner tại Bà Rịa - Vũng Tàu.",
-    images: ["/logo.png"],
+    images: ["/logo-website.png"],
   },
 };
 
@@ -67,7 +67,7 @@ const jsonLd = {
   legalName: siteConfig.name,
   taxID: siteConfig.taxId,
   url: siteConfig.url,
-  image: `${siteConfig.url}/logo.png`,
+  image: `${siteConfig.url}/logo-website.png`,
   email: siteConfig.email,
   telephone: siteConfig.hotline,
   address: {
