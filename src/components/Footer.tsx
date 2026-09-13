@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { mainNav, siteConfig, socialLinks } from "@/lib/site-config";
 import Logo from "./Logo";
-import Reveal from "./Reveal";
 
 const socialIcons: Record<string, React.ReactNode> = {
   Facebook: (
@@ -21,26 +20,7 @@ const serviceLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-dark text-silver">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <Reveal className="flex flex-col items-center justify-between gap-5 rounded-2xl border border-white/10 bg-white/5 px-6 py-8 text-center sm:flex-row sm:text-left">
-          <div>
-            <p className="text-lg font-bold text-white">
-              Sẵn sàng gia nhập đội xe điện Vũng Tàu EV?
-            </p>
-            <p className="mt-1 text-sm text-silver">
-              Đăng ký ngay để được tư vấn phù hiệu, mua xe và đối tác Xanh SM miễn phí.
-            </p>
-          </div>
-          <Link
-            href="/lien-he"
-            className="gradient-primary shrink-0 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-105"
-          >
-            Đăng Ký Gia Nhập HTX
-          </Link>
-        </Reveal>
-      </div>
-
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 pt-12 pb-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
         <div>
           <Logo dark size={56} />
           <p className="mt-4 text-sm">{siteConfig.name}</p>
