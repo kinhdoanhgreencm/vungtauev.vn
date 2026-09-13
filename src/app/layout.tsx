@@ -49,14 +49,21 @@ export const metadata: Metadata = {
     title: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
     description:
       "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Xanh SM Partner tại Bà Rịa - Vũng Tàu.",
-    images: [{ url: "/logo-website.png", width: 1200, height: 630, alt: siteConfig.name }],
+    images: [
+      {
+        url: "/bang-hieu-vungtau-ev.png",
+        width: 1668,
+        height: 943,
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
     description:
       "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Xanh SM Partner tại Bà Rịa - Vũng Tàu.",
-    images: ["/logo-website.png"],
+    images: ["/bang-hieu-vungtau-ev.png"],
   },
 };
 
