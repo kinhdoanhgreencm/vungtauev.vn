@@ -17,7 +17,7 @@ const items = [
   },
   {
     heading: "Vay mua xe VF3 chạy dịch vụ",
-    body: "Hỗ trợ hồ sơ vay ngân hàng lên đến 80-85% giá trị xe, lãi suất ưu đãi, giải ngân nhanh cho tài xế chạy Xanh SM, Grab.",
+    body: "Hỗ trợ hồ sơ vay ngân hàng lên đến 80-85% giá trị xe, lãi suất ưu đãi, giải ngân nhanh cho tài xế chạy Green SM, Grab.",
   },
   {
     heading: "Thủ tục lăn bánh xe điện biển vàng",

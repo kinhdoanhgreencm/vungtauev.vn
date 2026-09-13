@@ -25,7 +25,7 @@ export default function Hero() {
             style={{ animationDelay: "200ms" }}
           >
             Hỗ trợ thủ tục cấp phù hiệu, mua xe VinFast biển vàng trả góp và
-            kết nối Xanh SM Partner uy tín tại Bà Rịa - Vũng Tàu.
+            kết nối Green SM Partner uy tín tại Bà Rịa - Vũng Tàu.
           </p>
 
           <div

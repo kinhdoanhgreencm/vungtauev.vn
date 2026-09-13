@@ -6,7 +6,7 @@ const stats = [
   { value: "24/7", label: "Hỗ trợ khách hàng" },
 ];
 
-const partners = ["VinFast", "Xanh SM", "V-GREEN"];
+const partners = ["VinFast", "Green SM", "V-GREEN"];
 
 export default function TrustSection() {
   return (

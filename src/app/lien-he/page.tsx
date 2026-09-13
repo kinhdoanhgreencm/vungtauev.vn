@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Liên Hệ HTX Vận Tải Vũng Tàu EV",
   description:
-    "Liên hệ HTX Vận Tải Vũng Tàu EV để được tư vấn cấp phù hiệu, mua xe VinFast biển vàng và đăng ký đối tác Xanh SM Partner.",
+    "Liên hệ HTX Vận Tải Vũng Tàu EV để được tư vấn cấp phù hiệu, mua xe VinFast biển vàng và đăng ký đối tác Green SM Partner.",
   alternates: { canonical: "/lien-he" },
 };
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Liên hệ"
         title="Liên Hệ HTX Vận Tải Vũng Tàu EV"
-        description="Để lại thông tin hoặc liên hệ trực tiếp, đội ngũ HTX sẽ hỗ trợ bạn nhanh nhất về phù hiệu, mua xe và đối tác Xanh SM."
+        description="Để lại thông tin hoặc liên hệ trực tiếp, đội ngũ HTX sẽ hỗ trợ bạn nhanh nhất về phù hiệu, mua xe và đối tác Green SM."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">

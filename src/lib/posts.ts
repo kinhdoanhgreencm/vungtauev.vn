@@ -31,7 +31,7 @@ export const posts: Post[] = [
     content: [
       "Vũng Tàu là thành phố du lịch với lượng khách di chuyển đông vào cuối tuần và các dịp lễ. Tài xế nên nắm rõ các khung giờ cao điểm tại khu vực Bãi Sau, Bãi Trước và trung tâm thành phố để tối ưu số chuyến.",
       "So với xe xăng, xe điện có chi phí vận hành thấp hơn đáng kể nhờ giá sạc rẻ hơn giá xăng, tuy nhiên tài xế cần chủ động lên kế hoạch sạc pin để tránh gián đoạn giữa ca chạy.",
-      "Gia nhập HTX Vận Tải Vũng Tàu EV giúp tài xế được hỗ trợ về thủ tục pháp lý, phù hiệu xe hợp đồng và kết nối trực tiếp với các nền tảng gọi xe như Xanh SM.",
+      "Gia nhập HTX Vận Tải Vũng Tàu EV giúp tài xế được hỗ trợ về thủ tục pháp lý, phù hiệu xe hợp đồng và kết nối trực tiếp với các nền tảng gọi xe như Green SM.",
     ],
   },
   {

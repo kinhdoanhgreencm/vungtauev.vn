@@ -15,9 +15,9 @@ const services = [
     icon: "🚗",
   },
   {
-    title: "Đối tác Xanh SM Partner",
+    title: "Đối tác Green SM Partner",
     description: "Tối ưu chiết khấu và hỗ trợ tài xế toàn diện.",
-    href: "/dang-ky-xanh-sm",
+    href: "/dang-ky-green-sm",
     icon: "🟢",
   },
   {

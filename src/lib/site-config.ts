@@ -18,7 +18,7 @@ export const socialLinks = [
 export const mainNav = [
   { label: "Trang chủ", href: "/" },
   { label: "Mua xe VinFast", href: "/mua-xe-vinfast-bien-vang-vung-tau" },
-  { label: "Đăng ký Xanh SM", href: "/dang-ky-xanh-sm" },
+  { label: "Đăng ký Green SM", href: "/dang-ky-green-sm" },
   { label: "Cấp phù hiệu", href: "/cap-phu-hieu-va-vao-htx" },
   { label: "Tin tức", href: "/tin-tuc" },
   { label: "Liên hệ", href: "/lien-he" },

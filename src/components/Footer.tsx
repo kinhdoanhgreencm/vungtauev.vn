@@ -13,7 +13,7 @@ const socialIcons: Record<string, React.ReactNode> = {
 const serviceLinks = [
   { label: "Cấp phù hiệu xe vận tải", href: "/cap-phu-hieu-va-vao-htx" },
   { label: "Mua xe VinFast biển vàng", href: "/mua-xe-vinfast-bien-vang-vung-tau" },
-  { label: "Đăng ký Xanh SM Partner", href: "/dang-ky-xanh-sm" },
+  { label: "Đăng ký Green SM Partner", href: "/dang-ky-green-sm" },
 ];
 
 export default function Footer() {
@@ -72,7 +72,7 @@ export default function Footer() {
         <div>
           <p className="text-sm font-semibold text-white">Đối tác</p>
           <p className="mt-4 text-sm">VinFast</p>
-          <p className="mt-2 text-sm">Xanh SM</p>
+          <p className="mt-2 text-sm">Green SM</p>
           <p className="mt-2 text-sm">V-GREEN</p>
         </div>
       </div>

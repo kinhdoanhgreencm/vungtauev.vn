@@ -21,7 +21,7 @@ const items = [
   },
   {
     heading: "Làm phù hiệu xe công nghệ Vũng Tàu",
-    body: "Hỗ trợ tài xế chạy xe công nghệ (Xanh SM, Grab, Be...) hoàn thiện phù hiệu đúng quy định pháp luật.",
+    body: "Hỗ trợ tài xế chạy xe công nghệ (Green SM, Grab, Be...) hoàn thiện phù hiệu đúng quy định pháp luật.",
   },
   {
     heading: "Định vị xe tải, xe hợp đồng Vũng Tàu",
