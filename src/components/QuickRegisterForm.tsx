@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/gtag";
 
 const vehicleOptions = ["VF3", "VF5", "Herio Green", "Limo Green"];
 
@@ -53,6 +54,11 @@ export default function QuickRegisterForm() {
             throw new Error(body.error || "Gửi đăng ký thất bại.");
           }
 
+          trackEvent("generate_lead", {
+            form: "register",
+            vehicle: data.get("vehicle"),
+            source: pathname,
+          });
           setStatus("done");
         } catch (err) {
           setError(

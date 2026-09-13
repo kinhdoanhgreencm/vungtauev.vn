@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">(
@@ -49,6 +50,7 @@ export default function ContactForm() {
             throw new Error(body.error || "Gửi liên hệ thất bại.");
           }
 
+          trackEvent("generate_lead", { form: "contact" });
           setStatus("done");
         } catch (err) {
           setError(
