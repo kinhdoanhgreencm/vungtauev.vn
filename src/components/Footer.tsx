@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { mainNav, siteConfig, socialLinks } from "@/lib/site-config";
-import Logo from "./Logo";
 
 const socialIcons: Record<string, React.ReactNode> = {
   Facebook: (
@@ -22,8 +21,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-dark text-silver">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 pt-12 pb-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
         <div>
-          <Logo dark size={56} />
-          <p className="mt-4 text-sm">{siteConfig.name}</p>
+          <p className="text-sm font-semibold text-white">{siteConfig.name}</p>
           <p className="mt-1 text-sm">Mã số thuế: {siteConfig.taxId}</p>
           <p className="mt-1 text-sm">{siteConfig.address}</p>
 

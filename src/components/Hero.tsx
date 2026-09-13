@@ -1,3 +1,4 @@
+import Image from "next/image";
 import QuickRegisterForm from "./QuickRegisterForm";
 
 export default function Hero() {
@@ -26,9 +27,23 @@ export default function Hero() {
             Hỗ trợ thủ tục cấp phù hiệu, mua xe VinFast biển vàng trả góp và
             kết nối Xanh SM Partner uy tín tại Bà Rịa - Vũng Tàu.
           </p>
+
+          <div
+            className="animate-fade-in-up relative mt-8 aspect-[1668/943] w-full overflow-hidden rounded-2xl shadow-xl shadow-primary/10"
+            style={{ animationDelay: "300ms" }}
+          >
+            <Image
+              src="/bang-hieu-vungtau-ev.png"
+              alt="Trụ sở Hợp Tác Xã Vận Tải Vũng Tàu EV"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
 
-        <div className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+        <div className="animate-fade-in-up" style={{ animationDelay: "400ms" }}>
           <QuickRegisterForm />
         </div>
       </div>
