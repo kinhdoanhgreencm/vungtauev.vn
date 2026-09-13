@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, socialLinks } from "@/lib/site-config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -49,6 +49,14 @@ export const metadata: Metadata = {
     title: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
     description:
       "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Xanh SM Partner tại Bà Rịa - Vũng Tàu.",
+    images: [{ url: "/logo.png", width: 1254, height: 1254, alt: siteConfig.name }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
+    description:
+      "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Xanh SM Partner tại Bà Rịa - Vũng Tàu.",
+    images: ["/logo.png"],
   },
 };
 
@@ -59,6 +67,7 @@ const jsonLd = {
   legalName: siteConfig.name,
   taxID: siteConfig.taxId,
   url: siteConfig.url,
+  image: `${siteConfig.url}/logo.png`,
   email: siteConfig.email,
   telephone: siteConfig.hotline,
   address: {
@@ -67,6 +76,7 @@ const jsonLd = {
     addressLocality: "Thành phố Hồ Chí Minh",
     addressCountry: "VN",
   },
+  sameAs: socialLinks.map((s) => s.href),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
