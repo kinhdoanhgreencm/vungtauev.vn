@@ -90,6 +90,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="vi" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <meta property="fb:pages" content="61593920117815" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W3062W1C58"
           strategy="afterInteractive"
