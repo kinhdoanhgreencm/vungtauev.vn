@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
   shortName: "Vũng Tàu EV",
   slogan: "Hợp Tác Xã Vận Tải Xe Điện",
-  url: "https://vungtauev.vn",
-  domain: "vungtauev.vn",
+  url: "https://www.vungtauev.vn",
+  domain: "www.vungtauev.vn",
   taxId: "3802591697",
   address:
     "1218, Đường Phạm Hùng, Khu phố Phước Hạnh, Phường Bà Rịa, Thành phố Hồ Chí Minh",
