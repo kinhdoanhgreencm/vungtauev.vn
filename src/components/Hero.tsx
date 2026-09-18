@@ -33,7 +33,7 @@ export default function Hero() {
             style={{ animationDelay: "300ms" }}
           >
             <Image
-              src="/bang-hieu-vungtau-ev.png"
+              src="/bang-hieu-vungtau-ev.jpg"
               alt="Trụ sở Hợp Tác Xã Vận Tải Vũng Tàu EV"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Green SM Partner tại Bà Rịa - Vũng Tàu.",
     images: [
       {
-        url: "/bang-hieu-vungtau-ev.png",
+        url: "/bang-hieu-vungtau-ev.jpg",
         width: 1668,
         height: 943,
         alt: siteConfig.name,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: "Hợp Tác Xã Vận Tải Vũng Tàu EV",
     description:
       "Cấp phù hiệu xe hợp đồng, mua xe VinFast biển vàng trả góp và đăng ký đối tác Green SM Partner tại Bà Rịa - Vũng Tàu.",
-    images: ["/bang-hieu-vungtau-ev.png"],
+    images: ["/bang-hieu-vungtau-ev.jpg"],
   },
 };
 
