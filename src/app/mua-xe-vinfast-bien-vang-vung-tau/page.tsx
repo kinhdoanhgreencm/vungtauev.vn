@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import InfoSection from "@/components/InfoSection";
 import QuickRegisterForm from "@/components/QuickRegisterForm";
@@ -38,7 +39,15 @@ export default function VinfastPage() {
         description="Trả góp linh hoạt, thủ tục nhanh gọn - đồng hành cùng tài xế chuyển đổi sang xe điện chạy dịch vụ."
         />
       <InfoSection title="Thông tin cần biết" items={items} />
-      <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <Link
+          href="/vinfast-vung-tau"
+          className="text-sm font-semibold text-secondary hover:underline"
+        >
+          Xem đầy đủ bảng giá VinFast VF3-VF9 tại Vũng Tàu →
+        </Link>
+      </div>
+      <section className="mx-auto max-w-3xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
         <QuickRegisterForm />
       </section>
     </>

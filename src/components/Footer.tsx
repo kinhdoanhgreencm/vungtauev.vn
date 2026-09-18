@@ -11,6 +11,7 @@ const socialIcons: Record<string, React.ReactNode> = {
 };
 
 const serviceLinks = [
+  { label: "VinFast Vũng Tàu - Bảng giá", href: "/vinfast-vung-tau" },
   { label: "Cấp phù hiệu xe vận tải", href: "/cap-phu-hieu-va-vao-htx" },
   { label: "Mua xe VinFast biển vàng", href: "/mua-xe-vinfast-bien-vang-vung-tau" },
   { label: "Đăng ký Green SM Partner", href: "/dang-ky-green-sm" },

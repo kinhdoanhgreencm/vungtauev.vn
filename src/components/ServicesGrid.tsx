@@ -3,6 +3,12 @@ import Reveal from "./Reveal";
 
 const services = [
   {
+    title: "VinFast Vũng Tàu - Bảng giá 2026",
+    description: "Bảng giá VF3-VF9, Limo Green, đặt lịch lái thử, giao xe tận nơi.",
+    href: "/vinfast-vung-tau",
+    icon: "⚡",
+  },
+  {
     title: "Cấp phù hiệu xe vận tải",
     description: "Xử lý hồ sơ trong 24h - 48h, đúng chuẩn Sở GTVT.",
     href: "/cap-phu-hieu-va-vao-htx",

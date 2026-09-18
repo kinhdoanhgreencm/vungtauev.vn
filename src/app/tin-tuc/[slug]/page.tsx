@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostBySlug, posts } from "@/lib/posts";
+import { siteConfig } from "@/lib/site-config";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -40,8 +41,24 @@ export default async function PostPage({
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { "@type": "Organization", name: siteConfig.name },
+    publisher: { "@type": "Organization", name: siteConfig.name },
+    mainEntityOfPage: `${siteConfig.url}/tin-tuc/${post.slug}`,
+  };
+
   return (
     <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link
         href="/tin-tuc"
         className="text-sm font-semibold text-secondary hover:underline"

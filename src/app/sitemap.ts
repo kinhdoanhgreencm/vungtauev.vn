@@ -10,6 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${siteConfig.url}/vinfast-vung-tau`,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
       url: `${siteConfig.url}/mua-xe-vinfast-bien-vang-vung-tau`,
       changeFrequency: "weekly",
       priority: 0.9,

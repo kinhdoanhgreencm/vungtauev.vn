@@ -9,6 +9,8 @@ export const siteConfig = {
     "1218, Đường Phạm Hùng, Khu phố Phước Hạnh, Phường Bà Rịa, Thành phố Hồ Chí Minh",
   hotline: "0969 99 11 77",
   email: "htxvungtauev@gmail.com",
+  alternateNames: ["VinFast Vũng Tàu", "Vũng Tàu EV"],
+  areaServed: ["Vũng Tàu", "Bà Rịa", "Phú Mỹ"],
 };
 
 export const socialLinks = [
@@ -17,7 +19,7 @@ export const socialLinks = [
 
 export const mainNav = [
   { label: "Trang chủ", href: "/" },
-  { label: "Mua xe VinFast", href: "/mua-xe-vinfast-bien-vang-vung-tau" },
+  { label: "VinFast Vũng Tàu", href: "/vinfast-vung-tau" },
   { label: "Đăng ký Green SM", href: "/dang-ky-green-sm" },
   { label: "Cấp phù hiệu", href: "/cap-phu-hieu-va-vao-htx" },
   { label: "Tin tức", href: "/tin-tuc" },

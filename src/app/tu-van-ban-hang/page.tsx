@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LandingHeader from "@/components/LandingHeader";
 import InfoSection from "@/components/InfoSection";
 import QuickRegisterForm from "@/components/QuickRegisterForm";
@@ -125,6 +126,14 @@ export default function TuVanBanHangPage() {
         >
           Đăng Ký Tư Vấn Ngay
         </a>
+        <div className="mt-4">
+          <Link
+            href="/vinfast-vung-tau"
+            className="text-sm font-semibold text-secondary hover:underline"
+          >
+            Xem bảng giá VinFast Vũng Tàu chi tiết →
+          </Link>
+        </div>
       </div>
 
       {/* TESTIMONIALS */}

@@ -9,6 +9,46 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "showroom-vinfast-vung-tau-dia-chi-lich-lam-viec",
+    title: "Showroom VinFast Vũng Tàu: Địa Chỉ, Giờ Làm Việc, Lịch Lái Thử",
+    excerpt:
+      "Thông tin địa chỉ, giờ làm việc và cách đặt lịch lái thử xe điện VinFast tại khu vực Vũng Tàu, hỗ trợ giao xe tận nơi.",
+    date: "2026-09-15",
+    category: "Mua xe VinFast",
+    content: [
+      "Nhiều khách hàng tìm kiếm showroom VinFast tại Vũng Tàu để tham khảo trực tiếp các dòng xe điện VF3, VF5, VF6, VF7, VF8, VF9 và Limo Green trước khi quyết định mua. HTX Vận Tải Vũng Tàu EV là đầu mối tư vấn xe điện VinFast tại khu vực này, hỗ trợ khách hàng xem xe, lái thử và làm thủ tục mua xe nhanh gọn.",
+      "Khách hàng có thể liên hệ hotline để đặt lịch hẹn xem xe trực tiếp hoặc đăng ký lái thử tận nơi, không cần di chuyển đến showroom nếu ở xa. Đội ngũ tư vấn sẽ mang xe đến tận nhà theo lịch hẹn phù hợp.",
+      "Ngoài tư vấn bán xe, HTX còn hỗ trợ trọn gói thủ tục trả góp, đăng ký biển vàng chạy dịch vụ và đăng ký đối tác Green SM ngay sau khi nhận xe. Xem chi tiết bảng giá và các dòng xe tại trang VinFast Vũng Tàu.",
+    ],
+  },
+  {
+    slug: "vinfast-phu-my-ba-ria-vung-tau",
+    title: "VinFast Phú Mỹ, Bà Rịa Vũng Tàu: Tư Vấn Mua Xe Điện Gần Bạn",
+    excerpt:
+      "Hướng dẫn mua xe điện VinFast cho khách hàng tại khu vực Phú Mỹ, Bà Rịa - hỗ trợ tư vấn, giao xe và làm thủ tục tận nơi.",
+    date: "2026-09-10",
+    category: "Mua xe VinFast",
+    content: [
+      "Không chỉ khu vực trung tâm Vũng Tàu, HTX Vận Tải Vũng Tàu EV còn hỗ trợ khách hàng tại Phú Mỹ, Bà Rịa và các phường lân cận tư vấn mua xe điện VinFast, từ dòng xe đô thị nhỏ gọn như VF3 đến các dòng SUV, MPV như VF7, VF8, VF9, Limo Green.",
+      "Sau sáp nhập hành chính từ 1/7/2025, khu vực Phú Mỹ, Bà Rịa và Vũng Tàu cùng thuộc Thành phố Hồ Chí Minh, thuận tiện cho việc thống nhất chính sách giá, chương trình khuyến mãi và hỗ trợ hậu mãi cho khách hàng trong toàn khu vực.",
+      "Khách hàng tại Phú Mỹ, Bà Rịa có thể đăng ký tư vấn từ xa, được hỗ trợ giao xe tận nơi và hoàn thiện hồ sơ trả góp mà không cần di chuyển xa đến showroom trung tâm.",
+    ],
+  },
+  {
+    slug: "taxi-vinfast-vung-tau-chi-phi-loi-nhuan",
+    title: "Chạy Taxi VinFast Tại Vũng Tàu: Chi Phí, Lợi Nhuận, Có Nên Đầu Tư?",
+    excerpt:
+      "Phân tích chi phí đầu tư, chi phí vận hành và tiềm năng lợi nhuận khi chạy taxi, xe công nghệ bằng xe điện VinFast tại Vũng Tàu.",
+    date: "2026-09-05",
+    category: "Kinh nghiệm chạy dịch vụ",
+    content: [
+      "Vũng Tàu là thành phố du lịch với lượng khách di chuyển lớn quanh năm, đặc biệt vào cuối tuần và mùa cao điểm du lịch, tạo dư địa tốt cho tài xế chạy taxi, xe công nghệ bằng xe điện VinFast như VF5, Limo Green.",
+      "Chi phí đầu tư ban đầu cho một xe điện VinFast chạy dịch vụ bao gồm giá xe, thủ tục đăng ký biển vàng, phù hiệu xe hợp đồng. HTX Vận Tải Vũng Tàu EV hỗ trợ vay trả góp đến 80-85% giá trị xe, giúp tài xế giảm áp lực vốn ban đầu.",
+      "So với xe xăng, chi phí vận hành xe điện thấp hơn nhờ giá sạc rẻ hơn giá xăng và ít chi phí bảo dưỡng định kỳ. Kết hợp với chiết khấu khi đăng ký đối tác Green SM, tài xế có thể tối ưu lợi nhuận trên mỗi cuốc xe.",
+      "Trước khi đầu tư, tài xế nên tham khảo bảng giá xe điện VinFast mới nhất và được tư vấn chọn dòng xe phù hợp với nhu cầu chạy dịch vụ tại khu vực Vũng Tàu.",
+    ],
+  },
+  {
     slug: "tram-sac-vinfast-vgreen-vung-tau",
     title: "Trạm sạc V-GREEN tại Vũng Tàu: Vị trí và chi phí sạc mới nhất",
     excerpt:

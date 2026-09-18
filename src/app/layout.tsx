@@ -69,9 +69,10 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "AutomotiveBusiness",
   name: siteConfig.name,
   legalName: siteConfig.name,
+  alternateName: siteConfig.alternateNames,
   taxID: siteConfig.taxId,
   url: siteConfig.url,
   image: `${siteConfig.url}/logo-website.png`,
@@ -83,6 +84,10 @@ const jsonLd = {
     addressLocality: "Thành phố Hồ Chí Minh",
     addressCountry: "VN",
   },
+  areaServed: siteConfig.areaServed.map((name) => ({
+    "@type": "City",
+    name,
+  })),
   sameAs: socialLinks.map((s) => s.href),
 };
 
