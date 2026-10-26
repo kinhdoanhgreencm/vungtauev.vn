@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import InfoSection from "@/components/InfoSection";
-import QuickRegisterForm from "@/components/QuickRegisterForm";
+import RegisterPanel from "@/components/RegisterPanel";
 
 export const metadata: Metadata = {
   title: "Đăng Ký Green SM Partner Tại Vũng Tàu",
@@ -38,8 +38,12 @@ export default function GreenSmPage() {
         description="Gia nhập đội ngũ tài xế xe điện Green SM cùng HTX Vận Tải Vũng Tàu EV - hỗ trợ hồ sơ, chiết khấu và vận hành."
       />
       <InfoSection title="Quy trình đăng ký" items={items} />
-      <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
-        <QuickRegisterForm />
+      <section className="h-sec ">
+        <div className="wrap">
+          <div className="max-w-2xl">
+            <RegisterPanel />
+          </div>
+        </div>
       </section>
     </>
   );

@@ -1,46 +1,159 @@
 @import "tailwindcss";
 
+/*
+ * Nhận diện Vũng Tàu EV 1.0, theo quy chuẩn EV Green 3.0:
+ * tông sáng, Sky cho hình, Ocean cho hành động, Navy cho chữ tiêu đề, một họ chữ Plus Jakarta Sans.
+ * Riêng VEV: màu Bạc (vệt xám trong logo) và "dải ray" xiên theo cánh phải chữ V.
+ * Cẩm nang: ../HTX-VEV/VungTauEV-Brand-Identity.html
+ */
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --navy: #0a3572;
+  --sky: #0aa8f5;
+  --ocean: #0077c8;
+  --ocean-deep: #0369a1;
+  --ink: #0b1730;
+  --steel: #5b6b80;
+  --steel-soft: #8a98ab;
+  --tint: #f3f9fe;
+  --tint-strong: #e6f5fe;
+  --line: #dfe7f0;
+  --line-strong: #c3d0de;
+  --rail: #9ba2ae;
 
-  --color-primary: #0b4f9a;
-  --color-secondary: #0091ff;
-  --color-silver: #d1d5db;
-  --color-dark: #0f172a;
+  --background: #ffffff;
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--color-primary);
-  --color-secondary: var(--color-secondary);
-  --color-silver: var(--color-silver);
-  --color-dark: var(--color-dark);
-  --font-sans: var(--font-inter);
+  --color-navy: var(--navy);
+  --color-sky: var(--sky);
+  --color-ocean: var(--ocean);
+  --color-ocean-deep: var(--ocean-deep);
+  --color-ink: var(--ink);
+  --color-steel: var(--steel);
+  --color-tint: var(--tint);
+  --color-tint-strong: var(--tint-strong);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-rail: var(--rail);
+
+  /* Tên cũ trong mã trang, trỏ về màu thương hiệu */
+  --color-primary: var(--ocean);
+  --color-secondary: var(--ocean-deep);
+  --color-dark: var(--navy);
+  --color-silver: var(--rail);
+
+  /* Xám Tailwind đổi sang xám lạnh của thương hiệu */
+  --color-slate-50: var(--tint);
+  --color-slate-100: var(--tint-strong);
+  --color-slate-200: var(--line);
+  --color-slate-300: var(--line-strong);
+  --color-slate-400: var(--steel-soft);
+  --color-slate-500: var(--steel);
+  --color-slate-600: var(--steel);
+  --color-slate-700: var(--ink);
+
+  --font-sans: var(--font-jakarta);
+}
+
+/* Ba độ đậm, bo góc mềm, phẳng (bóng đổ chỉ dùng khi ghi rõ giá trị) */
+@theme {
+  --font-weight-bold: 600;
+  --font-weight-extrabold: 600;
+  --radius-2xl: 12px;
+  --radius-xl: 10px;
+  --shadow-sm: 0 0 #0000;
+  --shadow-md: 0 0 #0000;
+  --shadow-lg: 0 0 #0000;
+  --shadow-xl: 0 0 #0000;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ocean);
+  outline-offset: 2px;
+}
+
+/* Nút chính: nền Ocean, rê chuột Ocean Deep */
 .gradient-primary {
-  background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background-color: var(--ocean);
+  transition: background-color 0.15s ease;
+}
+
+.gradient-primary:hover {
+  background-color: var(--ocean-deep);
 }
 
 .text-gradient-primary {
-  background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--ocean);
+}
+
+/* Dải ray: dải Sky xiên theo cánh phải chữ V (dx/dy 0,72) kèm vạch Bạc mảnh bên trái */
+.ray {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ray::before,
+.ray::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-35.75deg);
+  transform-origin: top;
+  opacity: var(--ray-o, 1);
+}
+
+.ray::after {
+  right: var(--ray-r, 3%);
+  width: var(--ray-w, 15%);
+  background: var(--sky);
+}
+
+.ray::before {
+  right: calc(var(--ray-r, 3%) + var(--ray-w, 15%) + var(--ray-gap, 18px));
+  width: var(--ray-rail, 5px);
+  background: var(--rail);
+}
+
+/* Màn hình hẹp: chữ chiếm hết bề ngang, dải ray lùi thành nền mờ */
+@media (max-width: 767px) {
+  .ray {
+    --ray-o: 0.16;
+  }
+}
+
+/* Đường kẻ nhấn: Sky kèm vạch Bạc */
+.rule-ray {
+  height: 3px;
+  width: 56px;
+  background: linear-gradient(var(--sky) 0 2px, transparent 2px);
+  box-shadow: 0 2px 0 -1px var(--rail);
 }
 
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -57,20 +170,10 @@ body {
   }
 }
 
-@keyframes blob-float {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(10px, -20px) scale(1.08);
-  }
-}
-
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .reveal.is-visible {
@@ -83,11 +186,7 @@ body {
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.5s ease-out both;
-}
-
-.animate-blob {
-  animation: blob-float 8s ease-in-out infinite;
+  animation: fade-in-up 0.45s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -97,8 +196,7 @@ body {
     transition: none;
   }
   .animate-fade-in,
-  .animate-fade-in-up,
-  .animate-blob {
+  .animate-fade-in-up {
     animation: none;
   }
 }

@@ -1,51 +1,95 @@
-import Image from "next/image";
-import QuickRegisterForm from "./QuickRegisterForm";
+"use client";
+
+import { useEffect, useRef } from "react";
+
+// Hero "Studio sáng": bố cục poster xe (ba ô cận cảnh phía trên, xe lớn góc 3/4 ở giữa, tên xe giãn chữ bên dưới)
+// trên nền studio sáng, nét xiên và màu của VEV. Ảnh tạo bằng Higgsfield từ ảnh thật Limo Green
+// (scripts/build-hero-assets.py). Xe lướt vào từ phải rồi đỗ; rê chuột thì cảnh nghiêng theo chiều sâu.
+const DETAILS = [
+  { src: "/hero/detail-den-truoc.webp", label: "Dải đèn chữ V" },
+  { src: "/hero/detail-mam.webp", label: "Mâm hợp kim" },
+  { src: "/hero/detail-den-hau.webp", label: "Đèn hậu LED" },
+];
 
 export default function Hero() {
+  const stage = useRef<HTMLDivElement>(null);
+
+  // Nghiêng 3D theo vị trí chuột (bỏ qua khi người dùng tắt chuyển động)
+  useEffect(() => {
+    const el = stage.current;
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let raf = 0;
+    const onMove = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
+      const r = el.getBoundingClientRect();
+      const nx = ((e.clientX - r.left) / r.width) * 2 - 1;
+      const ny = ((e.clientY - r.top) / r.height) * 2 - 1;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        el.style.setProperty("--nx", Math.max(-1, Math.min(1, nx)).toFixed(3));
+        el.style.setProperty("--ny", Math.max(-1, Math.min(1, ny)).toFixed(3));
+      });
+    };
+    const reset = () => {
+      el.style.setProperty("--nx", "0");
+      el.style.setProperty("--ny", "0");
+    };
+    const host = el.closest("section") ?? el;
+    host.addEventListener("pointermove", onMove as EventListener);
+    host.addEventListener("pointerleave", reset);
+    return () => {
+      cancelAnimationFrame(raf);
+      host.removeEventListener("pointermove", onMove as EventListener);
+      host.removeEventListener("pointerleave", reset);
+    };
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-background">
-      <div className="animate-blob pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-secondary/15 blur-3xl" />
-      <div
-        className="animate-blob pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-primary/15 blur-3xl"
-        style={{ animationDelay: "2s" }}
-      />
+    <section className="hero-studio" aria-labelledby="hero-title">
+      <div className="hs-bg" aria-hidden="true">
+        <i className="hs-beam" />
+        <i className="hs-rail" />
+      </div>
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-24 lg:px-8">
-        <div>
-          <h1
-            className="animate-fade-in-up text-3xl font-extrabold leading-tight text-dark sm:text-4xl lg:text-5xl"
-          >
-            Hợp Tác Xã Vận Tải Vũng Tàu EV{" "}
-            <span className="text-gradient-primary">
-              Đồng Hành Cùng Tài Xế Xanh
-            </span>
-          </h1>
-          <p
-            className="animate-fade-in-up mt-5 max-w-xl text-base text-slate-600 sm:text-lg"
-            style={{ animationDelay: "200ms" }}
-          >
-            Hỗ trợ thủ tục cấp phù hiệu, mua xe VinFast biển vàng trả góp và
-            kết nối Green SM Partner uy tín tại Bà Rịa - Vũng Tàu.
-          </p>
+      <div className="wrap hs-inner">
+        <h1 id="hero-title" className="hs-brand">
+          Hợp tác xã vận tải Vũng Tàu EV
+        </h1>
+        <p className="hs-tag">Đồng hành cùng tài xế xanh</p>
 
-          <div
-            className="animate-fade-in-up relative mt-8 aspect-[1668/943] w-full overflow-hidden rounded-2xl shadow-xl shadow-primary/10"
-            style={{ animationDelay: "300ms" }}
-          >
-            <Image
-              src="/bang-hieu-vungtau-ev.jpg"
-              alt="Trụ sở Hợp Tác Xã Vận Tải Vũng Tàu EV"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-              priority
+        <div className="hs-stage" ref={stage}>
+          <ul className="hs-panels">
+            {DETAILS.map((d, i) => (
+              <li key={d.src} style={{ "--i": i } as React.CSSProperties}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={d.src} alt="" width={900} height={1117} />
+                <span>{d.label}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="hs-car">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/hero/limo-studio.webp"
+              alt="VinFast Limo Green màu Jet Black trong studio"
+              width={2000}
+              height={893}
+              fetchPriority="high"
             />
+            <span className="hs-gloss" aria-hidden="true" />
           </div>
         </div>
 
-        <div className="animate-fade-in-up" style={{ animationDelay: "400ms" }}>
-          <QuickRegisterForm />
-        </div>
+        <p className="hs-model">
+          <small>VinFast</small>
+          Limo Green
+        </p>
+        <span className="hs-rule" aria-hidden="true" />
+        <p className="hs-desc">
+          MPV điện 7 chỗ cho tài xế dịch vụ. Mua xe biển vàng, hỗ trợ trả góp và làm đủ hồ sơ phù hiệu cùng HTX
+          Vũng Tàu EV.
+        </p>
       </div>
     </section>
   );

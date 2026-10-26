@@ -61,15 +61,15 @@ export default async function PostPage({
       />
       <Link
         href="/tin-tuc"
-        className="text-sm font-semibold text-secondary hover:underline"
+        className="text-sm font-semibold text-ocean hover:underline"
       >
         ← Quay lại Tin tức
       </Link>
 
-      <span className="mt-6 inline-block w-fit rounded-full bg-secondary/10 px-3 py-1 text-xs font-semibold text-secondary">
+      <span className="mt-6 inline-block w-fit rounded-full bg-tint-strong px-2.5 py-0.5 text-xs font-semibold text-ocean-deep">
         {post.category}
       </span>
-      <h1 className="mt-4 text-3xl font-extrabold text-dark sm:text-4xl">
+      <h1 className="mt-4 text-[clamp(1.75rem,3.6vw,2.25rem)] font-semibold leading-[1.15] text-navy">
         {post.title}
       </h1>
       <p className="mt-3 text-sm text-slate-400">{formatDate(post.date)}</p>
@@ -88,7 +88,7 @@ export default async function PostPage({
         </p>
         <Link
           href="/lien-he"
-          className="gradient-primary mt-4 inline-block rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-105"
+          className="gradient-primary mt-4 inline-flex h-11 items-center rounded-lg px-5 text-sm font-semibold text-white"
         >
           Liên Hệ HTX Vũng Tàu EV
         </Link>

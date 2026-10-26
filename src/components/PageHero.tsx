@@ -1,31 +1,35 @@
+import Link from "next/link";
+
+// Đầu trang con như website EV Green: dải Navy cắt xiên cạnh dưới, đường dẫn có dấu xiên Sky, ảnh thật hoà vào nền
 export default function PageHero({
   eyebrow,
   title,
   description,
+  image,
 }: {
   eyebrow: string;
   title: string;
   description: string;
+  image?: string;
 }) {
   return (
-    <section className="gradient-primary">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <span className="animate-fade-in-up inline-block rounded-full bg-white/15 px-4 py-1 text-xs font-semibold text-white">
-          {eyebrow}
-        </span>
-        <h1
-          className="animate-fade-in-up mt-4 max-w-3xl text-3xl font-extrabold text-white sm:text-4xl"
-          style={{ animationDelay: "100ms" }}
-        >
-          {title}
-        </h1>
-        <p
-          className="animate-fade-in-up mt-4 max-w-2xl text-base text-white/90"
-          style={{ animationDelay: "200ms" }}
-        >
-          {description}
-        </p>
+    <header className={`p-hero${image ? " p-hero--img" : ""}`}>
+      {image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="p-hero-bg" src={image} alt="" fetchPriority="high" />
+      )}
+      <div className="wrap">
+        <nav className="p-crumbs" aria-label="Đường dẫn">
+          <Link href="/">Trang chủ</Link>
+          <span>
+            <i aria-hidden="true" />
+            {eyebrow}
+          </span>
+        </nav>
+        <p className="h-eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+        <p className="p-summary">{description}</p>
       </div>
-    </section>
+    </header>
   );
 }

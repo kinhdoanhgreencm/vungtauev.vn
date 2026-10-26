@@ -10,14 +10,18 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
 
   if (BARE_ROUTES.includes(pathname)) {
-    return <main className="flex-1">{children}</main>;
+    return (
+      <div className="site flex flex-1 flex-col">
+        <main className="flex-1">{children}</main>
+      </div>
+    );
   }
 
   return (
-    <>
+    <div className="site flex flex-1 flex-col">
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

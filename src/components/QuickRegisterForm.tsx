@@ -15,7 +15,7 @@ export default function QuickRegisterForm() {
 
   if (status === "done") {
     return (
-      <div className="rounded-2xl border border-secondary/30 bg-white p-6 text-center shadow-sm">
+      <div className="rounded-2xl border border-line bg-white p-6 text-center shadow-sm">
         <p className="font-semibold text-dark">
           Cảm ơn bạn đã đăng ký!
         </p>
@@ -76,19 +76,19 @@ export default function QuickRegisterForm() {
         required
         name="name"
         placeholder="Họ và tên"
-        className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-dark placeholder:text-slate-400 outline-none focus:border-secondary"
+        className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] placeholder:text-slate-400 outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
       />
       <input
         required
         name="phone"
         type="tel"
         placeholder="Số điện thoại"
-        className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-dark placeholder:text-slate-400 outline-none focus:border-secondary"
+        className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] placeholder:text-slate-400 outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
       />
       <select
         name="vehicle"
         defaultValue=""
-        className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-dark outline-none focus:border-secondary"
+        className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
       >
         <option value="" disabled>
           Loại xe quan tâm
@@ -105,7 +105,7 @@ export default function QuickRegisterForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="gradient-primary mt-1 rounded-lg px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-[1.02] disabled:opacity-60 disabled:hover:scale-100"
+        className="gradient-primary mt-1 rounded-lg px-5 py-3 text-sm font-semibold text-white min-h-11 disabled:opacity-60"
       >
         {status === "loading" ? "Đang gửi..." : "Gửi Đăng Ký"}
       </button>

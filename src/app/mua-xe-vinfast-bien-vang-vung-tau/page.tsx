@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import InfoSection from "@/components/InfoSection";
-import QuickRegisterForm from "@/components/QuickRegisterForm";
+import RegisterPanel from "@/components/RegisterPanel";
 
 export const metadata: Metadata = {
   title: "Mua Xe VinFast Biển Vàng Tại Vũng Tàu | Trả Góp 80-85%",
@@ -42,13 +42,17 @@ export default function VinfastPage() {
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <Link
           href="/vinfast-vung-tau"
-          className="text-sm font-semibold text-secondary hover:underline"
+          className="text-sm font-semibold text-ocean hover:underline"
         >
           Xem đầy đủ bảng giá VinFast VF3-VF9 tại Vũng Tàu →
         </Link>
       </div>
-      <section className="mx-auto max-w-3xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
-        <QuickRegisterForm />
+      <section className="h-sec ">
+        <div className="wrap">
+          <div className="max-w-2xl">
+            <RegisterPanel />
+          </div>
+        </div>
       </section>
     </>
   );

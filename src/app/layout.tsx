@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "./site-theme.css";
 import SiteChrome from "@/components/SiteChrome";
 import FloatingContact from "@/components/FloatingContact";
 import { siteConfig, socialLinks } from "@/lib/site-config";
 
-const inter = Inter({
-  variable: "--font-inter",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -93,7 +95,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="vi" className={`${inter.variable} h-full antialiased`}>
+    <html lang="vi" className={`${jakarta.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <meta property="fb:pages" content="61593920117815" />
         <Script

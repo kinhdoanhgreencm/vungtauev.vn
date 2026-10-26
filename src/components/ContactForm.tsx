@@ -11,7 +11,7 @@ export default function ContactForm() {
 
   if (status === "done") {
     return (
-      <div className="rounded-2xl border border-secondary/30 bg-white p-8 text-center shadow-sm">
+      <div className="rounded-2xl border border-line bg-white p-8 text-center shadow-sm">
         <p className="text-lg font-semibold text-dark">
           Cảm ơn bạn đã liên hệ!
         </p>
@@ -68,7 +68,7 @@ export default function ContactForm() {
             required
             name="name"
             placeholder="Nguyễn Văn A"
-            className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-dark placeholder:text-slate-400 outline-none focus:border-secondary"
+            className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] placeholder:text-slate-400 outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
           />
         </div>
         <div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             placeholder="09xx xxx xxx"
-            className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-dark placeholder:text-slate-400 outline-none focus:border-secondary"
+            className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] placeholder:text-slate-400 outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
           />
         </div>
       </div>
@@ -91,7 +91,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           placeholder="email@example.com"
-          className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-dark placeholder:text-slate-400 outline-none focus:border-secondary"
+          className="mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] placeholder:text-slate-400 outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
         />
       </div>
 
@@ -102,7 +102,7 @@ export default function ContactForm() {
           name="message"
           rows={4}
           placeholder="Bạn cần hỗ trợ về vấn đề gì?"
-          className="mt-1.5 w-full resize-none rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-dark placeholder:text-slate-400 outline-none focus:border-secondary"
+          className="mt-1.5 w-full resize-none rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] placeholder:text-slate-400 outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
         />
       </div>
 
@@ -111,7 +111,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="gradient-primary mt-1 rounded-lg px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-[1.02] disabled:opacity-60 disabled:hover:scale-100"
+        className="gradient-primary mt-1 rounded-lg px-5 py-3 text-sm font-semibold text-white min-h-11 disabled:opacity-60"
       >
         {status === "loading" ? "Đang gửi..." : "Gửi Liên Hệ"}
       </button>

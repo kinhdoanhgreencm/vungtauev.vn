@@ -1,14 +1,6 @@
 import Link from "next/link";
 import { mainNav, siteConfig, socialLinks } from "@/lib/site-config";
-
-const socialIcons: Record<string, React.ReactNode> = {
-  Facebook: (
-    <path
-      d="M13.5 21v-7.5H16l.5-3H13.5V8.5c0-.87.24-1.5 1.53-1.5H16.5V4.35C16.19 4.31 15.14 4.2 13.92 4.2c-2.55 0-4.3 1.56-4.3 4.42V10.5H7v3h2.62V21h3.88Z"
-      fill="currentColor"
-    />
-  ),
-};
+import { LogoLight } from "./Logo";
 
 const serviceLinks = [
   { label: "VinFast Vũng Tàu - Bảng giá", href: "/vinfast-vung-tau" },
@@ -19,67 +11,60 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-dark text-silver">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 pt-12 pb-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
+    <footer className="site-foot">
+      <div className="wrap foot-main">
         <div>
-          <p className="text-sm font-semibold text-white">{siteConfig.name}</p>
-          <p className="mt-1 text-sm">Mã số thuế: {siteConfig.taxId}</p>
-          <p className="mt-1 text-sm">{siteConfig.address}</p>
-
-          <div className="mt-5 flex items-center gap-3">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-secondary hover:text-white"
-              >
-                <svg viewBox="0 0 24 24" fill="none" className="h-4.5 w-4.5">
-                  {socialIcons[social.label]}
-                </svg>
-              </a>
-            ))}
+          <div className="foot-brand">
+            <LogoLight />
           </div>
+          <a className="foot-phone" href={`tel:${siteConfig.hotline.replace(/\s/g, "")}`}>
+            {siteConfig.hotline}
+          </a>
+          <p>
+            {siteConfig.name}
+            <br />
+            {siteConfig.address}
+            <br />
+            MST {siteConfig.taxId} · <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+          </p>
+          <h2>Hệ thống</h2>
+          <p>
+            Thành viên hệ thống hợp tác xã vận tải do Công ty Cổ phần EV Green điều hành.
+          </p>
         </div>
-
         <div>
-          <p className="text-sm font-semibold text-white">Liên kết nhanh</p>
-          <ul className="mt-4 space-y-2.5 text-sm">
-            {mainNav.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="hover:text-secondary">
-                  {item.label}
-                </Link>
+          <h2>Trang trên website</h2>
+          <ul>
+            {mainNav.map((i) => (
+              <li key={i.href}>
+                <Link href={i.href}>{i.label}</Link>
               </li>
             ))}
           </ul>
         </div>
-
         <div>
-          <p className="text-sm font-semibold text-white">Dịch vụ</p>
-          <ul className="mt-4 space-y-2.5 text-sm">
-            {serviceLinks.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="hover:text-secondary">
-                  {item.label}
-                </Link>
+          <h2>Dịch vụ</h2>
+          <ul>
+            {serviceLinks.map((i) => (
+              <li key={i.href}>
+                <Link href={i.href}>{i.label}</Link>
+              </li>
+            ))}
+            {socialLinks.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer">
+                  {s.label}
+                </a>
               </li>
             ))}
           </ul>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-white">Đối tác</p>
-          <p className="mt-4 text-sm">VinFast</p>
-          <p className="mt-2 text-sm">Green SM</p>
-          <p className="mt-2 text-sm">V-GREEN</p>
         </div>
       </div>
-
-      <div className="border-t border-white/10 py-4 text-center text-xs text-silver/70">
-        © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+      <div className="wrap foot-legal">
+        <span>
+          © {new Date().getFullYear()} {siteConfig.name}
+        </span>
+        <span>Thành viên hệ thống EV Green</span>
       </div>
     </footer>
   );

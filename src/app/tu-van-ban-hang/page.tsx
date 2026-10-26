@@ -67,25 +67,26 @@ export default function TuVanBanHangPage() {
       <LandingHeader />
 
       {/* HERO */}
-      <section className="gradient-primary">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-20">
+      <section className="relative overflow-hidden border-b border-line bg-tint">
+        <div className="ray" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-20">
           <div>
-            <span className="inline-block rounded-full bg-white/15 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+            <span className="inline-block rounded-full bg-tint-strong px-3 py-0.5 text-xs font-semibold text-ocean-deep">
               HTX Vũng Tàu EV &bull; Đại lý xe điện VinFast
             </span>
-            <h1 className="mt-4 max-w-xl text-3xl font-extrabold text-white sm:text-4xl">
+            <h1 className="mt-4 max-w-xl text-[clamp(1.75rem,3.6vw,2.25rem)] font-semibold leading-[1.15] text-navy">
               Sở Hữu Xe Điện VinFast Dễ Dàng Hơn Bao Giờ Hết
             </h1>
-            <p className="mt-4 max-w-lg text-base text-white/90">
+            <p className="mt-4 max-w-lg text-base text-steel">
               Tư vấn miễn phí, hỗ trợ trả góp đến 80&ndash;85% giá trị xe và đăng ký biển vàng kinh doanh vận tải &mdash; nhanh gọn, minh bạch.
             </p>
-            <div className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-dashed border-white/60 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
+            <div className="mt-5 inline-flex w-fit items-center gap-2 rounded-lg border border-dashed border-ocean/50 bg-white px-4 py-2 text-sm font-semibold text-ocean-deep">
               Ưu đãi tháng này: [CẬP NHẬT ƯU ĐÃI]
             </div>
             <div className="mt-6">
               <a
                 href={`tel:${phoneDigits}`}
-                className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-white/80"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-ocean tabular-nums hover:text-ocean-deep"
               >
                 Hoặc gọi ngay: {siteConfig.hotline}
               </a>
@@ -119,17 +120,17 @@ export default function TuVanBanHangPage() {
       <InfoSection title="Lợi Ích Khi Mua Xe Qua HTX Vũng Tàu EV" items={benefits} />
       <InfoSection title="Các Mẫu Xe Điện VinFast Nổi Bật" items={models} />
 
-      <div className="mx-auto max-w-7xl px-4 pb-4 text-center sm:px-6 lg:px-8">
+      <div className="wrap pb-4 text-center">
         <a
           href="#dang-ky"
-          className="gradient-primary inline-block rounded-full px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-105"
+          className="gradient-primary inline-flex h-12 items-center rounded-lg px-7 text-sm font-semibold text-white"
         >
           Đăng Ký Tư Vấn Ngay
         </a>
         <div className="mt-4">
           <Link
             href="/vinfast-vung-tau"
-            className="text-sm font-semibold text-secondary hover:underline"
+            className="text-sm font-semibold text-ocean hover:underline"
           >
             Xem bảng giá VinFast Vũng Tàu chi tiết →
           </Link>
@@ -137,8 +138,8 @@ export default function TuVanBanHangPage() {
       </div>
 
       {/* TESTIMONIALS */}
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-dark sm:text-3xl">
+      <section className="wrap py-14">
+        <h2 className="text-[clamp(1.3rem,2.4vw,1.6rem)] font-semibold text-navy">
           Khách Hàng Nói Gì Về HTX Vũng Tàu EV
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -154,8 +155,8 @@ export default function TuVanBanHangPage() {
 
       {/* CONTACT */}
       <section className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-dark sm:text-3xl">Liên Hệ / Showroom</h2>
+        <div className="wrap py-12">
+          <h2 className="text-[clamp(1.3rem,2.4vw,1.6rem)] font-semibold text-navy">Liên Hệ / Showroom</h2>
           <div className="mt-6 flex flex-col gap-3 text-sm text-slate-600 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
             <span>{siteConfig.address}</span>
             <a href={`tel:${phoneDigits}`} className="font-semibold text-primary">

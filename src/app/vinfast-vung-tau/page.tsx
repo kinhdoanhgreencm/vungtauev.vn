@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import InfoSection from "@/components/InfoSection";
-import QuickRegisterForm from "@/components/QuickRegisterForm";
+import RegisterPanel from "@/components/RegisterPanel";
 import Reveal from "@/components/Reveal";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import { siteConfig } from "@/lib/site-config";
@@ -111,9 +111,9 @@ export default function VinfastVungTauPage() {
         description="Tư vấn ô tô điện VinFast tại khu vực Vũng Tàu (TP.HCM): bảng giá VF3-VF9, Limo Green, đặt lịch lái thử, giao xe tận nơi, hỗ trợ trả góp."
       />
 
-      <section id="bang-gia" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <section id="bang-gia" className="wrap py-14">
         <Reveal>
-          <h2 className="text-2xl font-bold text-dark sm:text-3xl">
+          <h2 className="text-[clamp(1.3rem,2.4vw,1.6rem)] font-semibold text-navy">
             Bảng giá VinFast VF3 - VF9 tại Vũng Tàu
           </h2>
           <p className="mt-2 text-slate-600">
@@ -157,9 +157,9 @@ export default function VinfastVungTauPage() {
         />
       </div>
 
-      <section id="showroom" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <section id="showroom" className="wrap py-14">
         <Reveal>
-          <h2 className="text-2xl font-bold text-dark sm:text-3xl">
+          <h2 className="text-[clamp(1.3rem,2.4vw,1.6rem)] font-semibold text-navy">
             Showroom / Đại lý VinFast tại Vũng Tàu
           </h2>
         </Reveal>
@@ -184,7 +184,7 @@ export default function VinfastVungTauPage() {
                 href={`https://www.google.com/maps?q=${mapAddressQuery}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block font-semibold text-secondary hover:underline"
+                className="inline-block font-semibold text-ocean hover:underline"
               >
                 Xem đường đi trên Google Maps →
               </a>
@@ -212,9 +212,9 @@ export default function VinfastVungTauPage() {
         />
       </div>
 
-      <section id="tra-gop" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <section id="tra-gop" className="wrap py-14">
         <Reveal>
-          <h2 className="text-2xl font-bold text-dark sm:text-3xl">
+          <h2 className="text-[clamp(1.3rem,2.4vw,1.6rem)] font-semibold text-navy">
             Hỗ trợ trả góp mua xe điện VinFast
           </h2>
           <p className="mt-3 max-w-3xl text-slate-600">
@@ -224,14 +224,14 @@ export default function VinfastVungTauPage() {
           </p>
           <Link
             href="/mua-xe-vinfast-bien-vang-vung-tau"
-            className="mt-4 inline-block font-semibold text-secondary hover:underline"
+            className="mt-4 inline-block font-semibold text-ocean hover:underline"
           >
             Xem chi tiết trả góp xe biển vàng chạy dịch vụ →
           </Link>
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
+      <section className="wrap pb-4">
         <Reveal>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
             <h2 className="text-xl font-bold text-dark">
@@ -249,7 +249,7 @@ export default function VinfastVungTauPage() {
 
       <section id="faq" className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="text-2xl font-bold text-dark sm:text-3xl">
+          <h2 className="text-[clamp(1.3rem,2.4vw,1.6rem)] font-semibold text-navy">
             Câu hỏi thường gặp
           </h2>
         </Reveal>
@@ -269,8 +269,12 @@ export default function VinfastVungTauPage() {
         </div>
       </section>
 
-      <section id="lien-he-dia-chi" className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
-        <QuickRegisterForm />
+      <section id="lien-he-dia-chi" className="h-sec ">
+        <div className="wrap">
+          <div className="max-w-2xl">
+            <RegisterPanel />
+          </div>
+        </div>
       </section>
     </>
   );

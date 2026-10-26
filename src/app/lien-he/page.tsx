@@ -62,7 +62,7 @@ export default function ContactPage() {
         description="Để lại thông tin hoặc liên hệ trực tiếp, đội ngũ HTX sẽ hỗ trợ bạn nhanh nhất về phù hiệu, mua xe và đối tác Green SM."
       />
 
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <section className="wrap py-14">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-6">
             <div className="grid gap-4">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                     }
                     className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
                   >
-                    <span className="gradient-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-tint-strong text-ocean">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"

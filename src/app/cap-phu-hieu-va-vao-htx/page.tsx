@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import InfoSection from "@/components/InfoSection";
-import QuickRegisterForm from "@/components/QuickRegisterForm";
+import RegisterPanel from "@/components/RegisterPanel";
 
 export const metadata: Metadata = {
   title: "Cấp Phù Hiệu Xe Vận Tải & Gia Nhập HTX Tại Vũng Tàu",
@@ -38,8 +38,12 @@ export default function PhuHieuPage() {
         description="Xử lý hồ sơ phù hiệu xe hợp đồng nhanh chóng, hỗ trợ thủ tục gia nhập hợp tác xã vận tải tại Bà Rịa - Vũng Tàu."
       />
       <InfoSection title="Thông tin thủ tục" items={items} />
-      <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
-        <QuickRegisterForm />
+      <section className="h-sec ">
+        <div className="wrap">
+          <div className="max-w-2xl">
+            <RegisterPanel />
+          </div>
+        </div>
       </section>
     </>
   );
