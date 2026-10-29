@@ -4,7 +4,7 @@ export const siteConfig = {
   slogan: "Hợp Tác Xã Vận Tải Xe Điện",
   url: "https://vungtauev.vn",
   domain: "vungtauev.vn",
-  taxId: "3802591697",
+  taxId: "3502591697",
   address:
     "1218, Đường Phạm Hùng, Khu phố Phước Hạnh, Phường Bà Rịa, Thành phố Hồ Chí Minh",
   hotline: "0969 99 11 77",
