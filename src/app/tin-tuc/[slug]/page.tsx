@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPostBySlug, posts } from "@/lib/posts";
+import { PostBody } from "@/components/PostBody";
+import { faqOf, getPostBySlug, posts } from "@/lib/posts";
 import { siteConfig } from "@/lib/site-config";
 
 export function generateStaticParams() {
@@ -18,8 +19,8 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.seoTitle ?? post.title,
+    description: post.seoDescription ?? post.excerpt,
     alternates: { canonical: `/tin-tuc/${post.slug}` },
   };
 }
@@ -41,6 +42,7 @@ export default async function PostPage({
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const faq = faqOf(post);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -59,6 +61,22 @@ export default async function PostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faq.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            }),
+          }}
+        />
+      )}
       <Link
         href="/tin-tuc"
         className="text-sm font-semibold text-ocean hover:underline"
@@ -74,13 +92,7 @@ export default async function PostPage({
       </h1>
       <p className="mt-3 text-sm text-slate-400">{formatDate(post.date)}</p>
 
-      <div className="mt-8 space-y-5">
-        {post.content.map((paragraph, i) => (
-          <p key={i} className="text-base leading-relaxed text-slate-700">
-            {paragraph}
-          </p>
-        ))}
-      </div>
+      <PostBody content={post.content} />
 
       <div className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
         <p className="font-semibold text-dark">
