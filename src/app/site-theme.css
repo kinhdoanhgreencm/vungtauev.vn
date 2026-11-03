@@ -288,7 +288,7 @@ html.menu-open .floating-contact { display: none; }
 .h-dot { display: grid; place-items: center; width: 4rem; height: 4rem; border-radius: 50%; background: #fff; border: 2px solid var(--navy); color: var(--navy); box-shadow: 0 0 0 .375rem #fff; transition: background-color .25s ease, color .25s ease; }
 .h-dot .line-icon { width: 1.625rem; height: 1.625rem; }
 .h-timeline li:hover .h-dot { background: var(--navy); color: #fff; }
-.h-step-n { margin-top: .625rem; color: var(--sky); font-size: var(--fs-xs); font-weight: 800; letter-spacing: .12em; }
+.h-step-n { margin-top: .625rem; color: var(--ocean); font-size: var(--fs-xs); font-weight: 800; letter-spacing: .12em; }
 .h-timeline strong { color: var(--navy); font-size: var(--fs-sm); line-height: 1.35; font-weight: var(--fw-strong); }
 .h-timeline li > span:last-child { color: var(--steel); font-size: var(--fs-xs); line-height: 1.5; }
 

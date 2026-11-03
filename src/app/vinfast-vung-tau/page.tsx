@@ -228,6 +228,12 @@ export default function VinfastVungTauPage() {
           >
             Xem chi tiết trả góp xe biển vàng chạy dịch vụ →
           </Link>
+          <Link
+            href="/tu-van-ban-hang"
+            className="mt-2 block font-semibold text-ocean hover:underline"
+          >
+            Đăng ký tư vấn mua xe VinFast trả góp →
+          </Link>
         </Reveal>
       </section>
 

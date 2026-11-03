@@ -46,6 +46,12 @@ export default function VinfastPage() {
         >
           Xem đầy đủ bảng giá VinFast VF3-VF9 tại Vũng Tàu →
         </Link>
+        <Link
+          href="/tu-van-ban-hang"
+          className="mt-2 block text-sm font-semibold text-ocean hover:underline"
+        >
+          Đăng ký tư vấn mua xe trả góp →
+        </Link>
       </div>
       <section className="h-sec ">
         <div className="wrap">

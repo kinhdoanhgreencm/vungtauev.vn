@@ -123,7 +123,7 @@ export default function HomePage() {
             <div className="h-seal">
               <span className="h-seal-ring h-seal-ring--logo">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo-vev.png" alt="" width={76} height={66} />
+                <img src="/logo-vev.webp" alt="" width={76} height={66} />
               </span>
               <strong>{siteConfig.name}</strong>
               <span>MST {siteConfig.taxId}</span>

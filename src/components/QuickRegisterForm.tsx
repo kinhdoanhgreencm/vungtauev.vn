@@ -87,6 +87,7 @@ export default function QuickRegisterForm() {
       />
       <select
         name="vehicle"
+        aria-label="Loại xe quan tâm"
         defaultValue=""
         className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-base text-ink sm:text-[15px] outline-none focus:border-ocean focus:ring-3 focus:ring-sky/25"
       >

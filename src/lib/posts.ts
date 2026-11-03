@@ -67,6 +67,7 @@ export const posts: Post[] = [
   },
   {
     slug: "showroom-vinfast-vung-tau-dia-chi-lich-lam-viec",
+    seoTitle: "Showroom VinFast Vũng Tàu: địa chỉ, lái thử",
     title: "Showroom VinFast Vũng Tàu: Địa Chỉ, Giờ Làm Việc, Lịch Lái Thử",
     excerpt:
       "Thông tin địa chỉ, giờ làm việc và cách đặt lịch lái thử xe điện VinFast tại khu vực Vũng Tàu, hỗ trợ giao xe tận nơi.",
@@ -80,6 +81,7 @@ export const posts: Post[] = [
   },
   {
     slug: "vinfast-phu-my-ba-ria-vung-tau",
+    seoTitle: "Mua xe điện VinFast ở Phú Mỹ, Bà Rịa",
     title: "VinFast Phú Mỹ, Bà Rịa Vũng Tàu: Tư Vấn Mua Xe Điện Gần Bạn",
     excerpt:
       "Hướng dẫn mua xe điện VinFast cho khách hàng tại khu vực Phú Mỹ, Bà Rịa - hỗ trợ tư vấn, giao xe và làm thủ tục tận nơi.",
@@ -93,6 +95,7 @@ export const posts: Post[] = [
   },
   {
     slug: "taxi-vinfast-vung-tau-chi-phi-loi-nhuan",
+    seoTitle: "Chạy taxi VinFast ở Vũng Tàu có lãi không",
     title: "Chạy Taxi VinFast Tại Vũng Tàu: Chi Phí, Lợi Nhuận, Có Nên Đầu Tư?",
     excerpt:
       "Phân tích chi phí đầu tư, chi phí vận hành và tiềm năng lợi nhuận khi chạy taxi, xe công nghệ bằng xe điện VinFast tại Vũng Tàu.",
@@ -107,6 +110,7 @@ export const posts: Post[] = [
   },
   {
     slug: "tram-sac-vinfast-vgreen-vung-tau",
+    seoTitle: "Trạm sạc V-GREEN Vũng Tàu: vị trí, giá sạc",
     title: "Trạm sạc V-GREEN tại Vũng Tàu: Vị trí và chi phí sạc mới nhất",
     excerpt:
       "Tổng hợp các trạm sạc V-GREEN và trạm sạc VinFast tại Vũng Tàu, chi phí sạc xe điện VF5, VF3 chạy dịch vụ mỗi tháng.",
@@ -120,6 +124,7 @@ export const posts: Post[] = [
   },
   {
     slug: "kinh-nghiem-chay-taxi-dien-vung-tau",
+    seoTitle: "Kinh nghiệm chạy taxi điện ở Vũng Tàu",
     title: "Kinh nghiệm chạy taxi điện tại Vũng Tàu cho tài xế mới",
     excerpt:
       "Chia sẻ kinh nghiệm thực tế về khung giờ đông khách, tuyến đường hiệu quả và cách tối ưu doanh thu khi chạy xe điện dịch vụ tại Vũng Tàu.",
@@ -133,6 +138,7 @@ export const posts: Post[] = [
   },
   {
     slug: "so-sanh-chi-phi-xe-xang-xe-dien-chay-dich-vu",
+    seoTitle: "Chi phí xe xăng và xe điện chạy dịch vụ",
     title: "So sánh chi phí vận hành xe xăng và xe điện khi chạy dịch vụ",
     excerpt:
       "Phân tích chi tiết chi phí nhiên liệu, bảo dưỡng và khấu hao giữa xe xăng truyền thống và xe điện VinFast khi chạy taxi, xe công nghệ.",

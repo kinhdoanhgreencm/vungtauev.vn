@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 // Có bản sáng (nền trắng) và bản đảo màu (trên dải Navy); CSS chọn bản hiện theo nền đầu trang.
 function Mark({ light = false }: { light?: boolean }) {
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src={light ? "/logo-vev-dao-mau.png" : "/logo-vev.png"} alt="" width={815} height={709} />;
+  return <img src={light ? "/logo-vev-dao-mau.webp" : "/logo-vev.webp"} alt="" width={207} height={180} />;
 }
 
 export default function Logo({ switchable = false }: { switchable?: boolean }) {
