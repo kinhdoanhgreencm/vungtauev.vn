@@ -1,7 +1,7 @@
 // /llms.txt: bản tóm tắt website dạng Markdown cho trợ lý AI (ChatGPT, Claude, Perplexity, Gemini) đọc nhanh,
 // theo đề xuất tại llmstxt.org. Lấy từ site-config và danh sách bài trong posts.ts.
 import { posts } from "@/lib/posts";
-import { siteConfig, socialLinks } from "@/lib/site-config";
+import { siteConfig, socialLinks, systemLinks } from "@/lib/site-config";
 
 const abs = (path: string) => `${siteConfig.url}${path}`;
 
@@ -29,6 +29,9 @@ export function GET() {
     "",
     "## Trang chính",
     ...PAGES.map(([path, title, desc]) => `- [${title}](${abs(path)}): ${desc}`),
+    "",
+    "## Hợp tác xã cùng hệ thống",
+    ...systemLinks.map((s) => `- [${s.label}](${s.href})`),
     "",
     "## Bài viết",
     ...posts.map((p) => `- [${p.title}](${abs(`/tin-tuc/${p.slug}`)}): ${p.excerpt}`),

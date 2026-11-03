@@ -4,7 +4,6 @@ import PageHero from "@/components/PageHero";
 import InfoSection from "@/components/InfoSection";
 import RegisterPanel from "@/components/RegisterPanel";
 import Reveal from "@/components/Reveal";
-import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -94,12 +93,6 @@ export default function VinfastVungTauPage() {
 
   return (
     <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: "Trang chủ", path: "/" },
-          { name: "VinFast Vũng Tàu", path: "/vinfast-vung-tau" },
-        ]}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -107,6 +100,7 @@ export default function VinfastVungTauPage() {
 
       <PageHero
         eyebrow="VinFast Vũng Tàu"
+        crumb={{ name: "VinFast Vũng Tàu", path: "/vinfast-vung-tau" }}
         title="VinFast Vũng Tàu - Bảng Giá Xe Điện & Tư Vấn Mua Xe 2026"
         description="Tư vấn ô tô điện VinFast tại khu vực Vũng Tàu (TP.HCM): bảng giá VF3-VF9, Limo Green, đặt lịch lái thử, giao xe tận nơi, hỗ trợ trả góp."
       />

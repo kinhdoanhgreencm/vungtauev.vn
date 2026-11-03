@@ -34,6 +34,7 @@ export default function GreenSmPage() {
     <>
       <PageHero
         eyebrow="Đối tác Green SM Partner"
+        crumb={{ name: "Đăng ký Green SM Partner", path: "/dang-ky-green-sm" }}
         title="Đăng Ký Green SM Partner Tại Vũng Tàu"
         description="Gia nhập đội ngũ tài xế xe điện Green SM cùng HTX Vận Tải Vũng Tàu EV - hỗ trợ hồ sơ, chiết khấu và vận hành."
       />

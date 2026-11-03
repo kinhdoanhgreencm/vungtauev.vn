@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { mainNav, siteConfig, socialLinks } from "@/lib/site-config";
+import { mainNav, siteConfig, socialLinks, systemLinks } from "@/lib/site-config";
 import { LogoLight } from "./Logo";
 
 const serviceLinks = [
@@ -31,6 +31,14 @@ export default function Footer() {
           <p>
             Thành viên hệ thống hợp tác xã vận tải do Công ty Cổ phần EV Green điều hành.
           </p>
+          <h2>Hợp tác xã cùng hệ thống</h2>
+          <ul>
+            {systemLinks.map((s) => (
+              <li key={s.href}>
+                <a href={s.href}>{s.label}</a>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <h2>Trang trên website</h2>

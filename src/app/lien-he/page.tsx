@@ -58,6 +58,7 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Liên hệ"
+        crumb={{ name: "Liên hệ", path: "/lien-he" }}
         title="Liên Hệ HTX Vận Tải Vũng Tàu EV"
         description="Để lại thông tin hoặc liên hệ trực tiếp, đội ngũ HTX sẽ hỗ trợ bạn nhanh nhất về phù hiệu, mua xe và đối tác Green SM."
       />

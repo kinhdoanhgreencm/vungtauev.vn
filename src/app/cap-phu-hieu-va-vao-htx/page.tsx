@@ -34,6 +34,7 @@ export default function PhuHieuPage() {
     <>
       <PageHero
         eyebrow="Dịch vụ pháp lý vận tải"
+        crumb={{ name: "Cấp phù hiệu và vào HTX", path: "/cap-phu-hieu-va-vao-htx" }}
         title="Cấp Phù Hiệu Xe Vận Tải & Gia Nhập HTX"
         description="Xử lý hồ sơ phù hiệu xe hợp đồng nhanh chóng, hỗ trợ thủ tục gia nhập hợp tác xã vận tải tại Bà Rịa - Vũng Tàu."
       />

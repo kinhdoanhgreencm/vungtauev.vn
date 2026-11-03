@@ -156,6 +156,18 @@ export function getPostBySlug(slug: string) {
   return posts.find((p) => p.slug === slug);
 }
 
+/** Tối đa `limit` bài khác để gợi ý cuối bài: cùng chuyên mục trước, rồi tới bài mới nhất. */
+export function relatedPosts(post: Post, limit = 3) {
+  return posts
+    .filter((p) => p.slug !== post.slug)
+    .sort(
+      (a, b) =>
+        Number(b.category === post.category) - Number(a.category === post.category) ||
+        b.date.localeCompare(a.date),
+    )
+    .slice(0, limit);
+}
+
 /** Các cặp "### câu hỏi" + đoạn trả lời nằm sau mục "## Câu hỏi thường gặp", để khai báo FAQPage. */
 export function faqOf(post: Post) {
   const start = post.content.findIndex((b) => b === "## Câu hỏi thường gặp");

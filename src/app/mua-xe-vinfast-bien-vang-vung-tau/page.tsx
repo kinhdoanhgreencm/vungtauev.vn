@@ -35,6 +35,7 @@ export default function VinfastPage() {
     <>
       <PageHero
         eyebrow="Đại lý ủy quyền VinFast"
+        crumb={{ name: "Mua xe VinFast biển vàng", path: "/mua-xe-vinfast-bien-vang-vung-tau" }}
         title="Mua Xe VinFast Biển Vàng Tại Vũng Tàu"
         description="Trả góp linh hoạt, thủ tục nhanh gọn - đồng hành cùng tài xế chuyển đổi sang xe điện chạy dịch vụ."
         />

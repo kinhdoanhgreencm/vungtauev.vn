@@ -17,6 +17,13 @@ export const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/vungtauev" },
 ];
 
+/** Hợp tác xã cùng hệ thống EV Green, trang giới thiệu nằm bên co-ev.vn */
+export const systemLinks = [
+  { label: "HTX Vận tải EVG – TP Hồ Chí Minh", href: "https://co-ev.vn/hop-tac-xa/van-tai-evg" },
+  { label: "HTX Vận tải Cần Thơ EV – Cần Thơ", href: "https://co-ev.vn/hop-tac-xa/van-tai-can-tho-ev" },
+  { label: "EV Green", href: "https://co-ev.vn" },
+];
+
 export const mainNav = [
   { label: "Trang chủ", href: "/" },
   { label: "VinFast Vũng Tàu", href: "/vinfast-vung-tau" },

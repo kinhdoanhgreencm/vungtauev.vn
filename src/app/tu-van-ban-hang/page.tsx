@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LandingHeader from "@/components/LandingHeader";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import InfoSection from "@/components/InfoSection";
 import QuickRegisterForm from "@/components/QuickRegisterForm";
 import { siteConfig, socialLinks } from "@/lib/site-config";
@@ -65,12 +66,27 @@ export default function TuVanBanHangPage() {
   return (
     <>
       <LandingHeader />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Trang chủ", path: "/" },
+          { name: "Tư vấn mua xe trả góp", path: "/tu-van-ban-hang" },
+        ]}
+      />
 
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-line bg-tint">
         <div className="ray" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-20">
           <div>
+            <nav aria-label="Đường dẫn" className="mb-4 text-sm text-steel">
+              <Link href="/" className="hover:text-ocean hover:underline">
+                Trang chủ
+              </Link>
+              <span aria-hidden="true" className="mx-2 text-slate-400">
+                /
+              </span>
+              <span className="text-navy">Tư vấn mua xe trả góp</span>
+            </nav>
             <span className="inline-block rounded-full bg-tint-strong px-3 py-0.5 text-xs font-semibold text-ocean-deep">
               HTX Vũng Tàu EV &bull; Đại lý xe điện VinFast
             </span>
