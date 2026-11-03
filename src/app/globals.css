@@ -60,6 +60,11 @@
 
 /* Ba độ đậm, bo góc mềm, phẳng (bóng đổ chỉ dùng khi ghi rõ giá trị) */
 @theme {
+  /* Chữ lớn hơn mặc định Tailwind khoảng 1px cho dễ đọc */
+  --text-xs: .8125rem;
+  --text-sm: .9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
   --font-weight-bold: 600;
   --font-weight-extrabold: 600;
   --radius-2xl: 12px;
@@ -74,7 +79,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), "Segoe UI", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
 }
 
